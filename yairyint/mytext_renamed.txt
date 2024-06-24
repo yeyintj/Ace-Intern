@@ -1,0 +1,27 @@
+#If you want to see list of the folder in the same directory
+#First
+#Use ls 
+
+#If you want to create a file 
+#Use touch follow by a file name that you want to create
+
+#If you want to move new directory
+#Use cd to move a new directory
+
+#If you want to see hidden files in the same directory
+#Use ls -la
+
+#If you want to copy a file to another file 
+#Use cp copy-file's name to new-file's name
+
+#If you want to rename a file to another file name
+#Use cp copy-file's name > new-file's name
+
+#If you want to display current directory
+#Use pwd
+
+#If you want to concatenate and display the content of a file
+#Use cat follow by file name
+
+#If you want to output strings or something like that you want to output
+#Use echo follow by file name 
