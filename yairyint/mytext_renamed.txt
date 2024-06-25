@@ -25,3 +25,6 @@
 
 #If you want to output strings or something like that you want to output
 #Use echo follow by file name 
+
+#If you want to a file or more to folder to another folder
+#Use cp ./AceJ/index.js ./text && cp -r text text1
