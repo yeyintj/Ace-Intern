@@ -26,15 +26,15 @@
 
 
 //Part 2
-
-//Function Declaration()
+//if a function declared with function expresstion and then it's called function statemnet
+//Function Declaration(statement)
 
 // function greed(name){
 //     console.log("Hello", name);
 // }
 // greed("yairyint");
 
-//Function Expression(statement)
+//Function Expression(expression)
 
 // const greetExpression = (name) => {
 //     console.log(name);
@@ -91,16 +91,16 @@
 // console.log(result);
 
 //Checking Truthy and Falsy
-// const trueOrFalse = function(){
-//   const x = 2;
-
-//   if(x){
-//     console.log("Truthy");
+// const isTruthyOrFalsy = (num)=>{
+//   const falsy = [null, undefined, "", NaN , 0];
+//   if(falsy.includes(num)){
+//       console.log("It's Falsy");
 //   }else{
-//     console.log("Falsy");
+//       console.log("It's Truthy");
 //   }
 // }
-// trueOrFalse();
+
+// isTruthyOrFalsy("")
 
 //Common Logic Functions
 
@@ -151,18 +151,18 @@
 // isLeapYear("2024")
 
 //Finding Maximum Number
-const array = [12,3,5,9];
-const findMax = (arr) => {
-  let max = 0;
+// const array = [12,3,5,9];
+// const findMax = (arr) => {
+//   let max = 0;
 
-  for(let i=0; i<arr.length; i++){
-    if(arr[i] > max){
-      max = arr[i]
-    }
-  }
-  return max;
-}
-console.log(findMax(array));
+//   for(let i=0; i<arr.length; i++){
+//     if(arr[i] > max){
+//       max = arr[i]
+//     }
+//   }
+//   return max;
+// }
+// console.log(findMax(array));
 
 // Counting Vowels
 
@@ -224,3 +224,117 @@ console.log(findMax(array));
 // }
 
 // console.log(findLongestWord("hello myanmar"));
+
+
+///Repratice///
+
+//Checking Even or Odd
+
+// const isEven = (num) =>{
+
+//   if(num%2 === 0){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+// console.log(isEven(4))
+
+//Reversing a String
+// const reverseString = (str)=>{
+//   let name = str.split("").reverse().join("");
+
+//   return name;
+// }
+// console.log(reverseString("hello"))
+
+//Checking Palindrome
+// const isPalindrome = (str)=>{
+//   const repExp = /[\W_]/g; //use the RegExp to remove unwanted characters
+//   let lowerCase = str.toLowerCase().replace(repExp,''); 
+//   const strReverse = lowerCase.split("").reverse().join("");
+
+//   if(strReverse === lowerCase){
+//     return true;
+//   }else{
+//     return false;
+//   }
+//   //return lowerCase;
+// }
+// console.log(isPalindrome("A man, a plan, a canal. Panama"));
+
+//Checking Leap Year
+// const isLeapYear = (year)=>{
+//   if(year%4 === 0){
+//     console.log("It's a leap year");
+//   }else{
+//     console.log("It's not a leap year");
+//   }
+// }
+
+// isLeapYear(2023);
+
+//Finding Maximum Number
+// const findMax = (arr) => {
+//   let max = 0;
+
+//   for(let i=0; i<arr.length; i++){
+//     if(arr[i] > max){
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// console.log(findMax([100,2,3,5,20,15]))
+
+//Counting Vowels
+// const countVowels = (str)=>{
+//   const vowels = ['a','A','e','E','i','I','o','O','u','U'];
+//   let vowelsCount = 0;
+
+//   for(let char of str){
+//     if(vowels.includes(char)){
+//       vowelsCount++;
+//     }
+//   }
+//   return vowelsCount;
+// }
+
+// console.log(countVowels("hello wrold"));
+
+//Capitalizing Words
+// const capitalizeWords = (str)=>{
+//   const words = str.split(" ");
+  
+//   for(let i=0; i<words.length; i++){
+//     words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+//   }
+//   return words.join(" ");
+// }
+// console.log(capitalizeWords("hello world"));
+
+//Calculating the Sum of an Array
+// let array = [12,3,4,6,5];
+// const sumArray = (arr)=>{
+//   let sum = 0;
+//   for(let i = 0; i<arr.length; i++){
+//     sum += arr[i];
+//   }
+//   return sum;
+// }
+// console.log(sumArray(array));
+
+// Finding the Longest Word in a Sentence
+const findLongestWord = (sentence)=>{
+  const words = sentence.split(" ");
+  let longestWord = null;
+
+  for(let i = 0; i<words.length; i++){
+    if(words[i].length > longestWord){
+      longestWord = words[i].length;
+      console.log(longestWord);
+    }
+  }
+  return longestWord;
+}
+console.log(findLongestWord("hell myanmar"));
